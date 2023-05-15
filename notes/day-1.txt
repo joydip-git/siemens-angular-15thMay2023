@@ -21,3 +21,26 @@ CSS:
 	a. inline styling
 	b. outline styling
 
+JS:
+	data types: 
+		number, string, boolean,  object, function, NaN, undefined, null, Infinity
+
+transpilation: conversion of TS to JS or new version of JS to older version of JS
+transpiler tools:
+	JS => JS: babel 
+	TS => JS: typescript
+
+NPM: Node Package Manager
+
+package.json file:
+>npm init
+>npm init --yes
+
+npm i typescript -D (development dependency)
+npm i typescript (complete dependency)
+
+older:
+npm i typescript --save-dev (development dependency)
+npm i typescript --save (complete dependency)
+
+

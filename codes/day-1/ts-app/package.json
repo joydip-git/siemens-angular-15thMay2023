@@ -1,0 +1,21 @@
+{
+  "name": "ts-app",
+  "version": "1.0.0",
+  "description": "simple app using ts and node",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydip-git/siemens-angular-15thMay2023.git"
+  },
+  "author": "joydip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joydip-git/siemens-angular-15thMay2023/issues"
+  },
+  "homepage": "https://github.com/joydip-git/siemens-angular-15thMay2023#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
