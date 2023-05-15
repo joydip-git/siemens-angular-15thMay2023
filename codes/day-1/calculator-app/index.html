@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src="./node_modules/requirejs/require.js"></script>
 </head>
 
 <body>
@@ -22,7 +21,7 @@
                 <input type="text" id="txtSecond">
             </div>
             <div>
-                <input type="button" value="Calculate" onclick="calculate()">
+                <input type="button" value="Calculate" id="btnCalulate">
             </div>
             <div>
                 <label for="txtResult">Result: &nbsp;</label>
@@ -30,6 +29,7 @@
             </div>
         </form>
     </fieldset>
+    <script src="./node_modules/requirejs/require.js" data-main="./dist/index.js"></script>
 </body>
 
 </html>
