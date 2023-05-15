@@ -1,3 +1,5 @@
+//var utilityModule = require('./utility')
+import { add, divide } from "./utility";
 var x = 10
 console.log(typeof x)
 
@@ -21,15 +23,17 @@ var obj = {
 console.log(typeof obj)
 
 
+// console.log(utilityModule.addFn(10, 20))
+// console.log(typeof utilityModule.addFn)
+
 console.log(add(10, 20))
 console.log(typeof add)
-
-
 
 var data: number = 10
 // data = 'siemens'
 var expo = data.toExponential(2)
 console.log(expo)
 
+// var res = utilityModule.divFn(12, 0)
 var res = divide(12, 0)
 console.log(typeof res)

@@ -16,6 +16,10 @@
   },
   "homepage": "https://github.com/joydip-git/siemens-angular-15thMay2023#readme",
   "devDependencies": {
+    "@types/node": "^20.1.4",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.6"
   }
 }

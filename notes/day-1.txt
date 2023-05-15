@@ -43,4 +43,31 @@ older:
 npm i typescript --save-dev (development dependency)
 npm i typescript --save (complete dependency)
 
+TSC:
+command to create tsconfig.json file 
+>.\node_modules\.bin\tsc --init (local)
+>tsc --init (global)
+
+module: one js/ts file, its an API
+
+module formats:
+
+a. common js format (default format for modular coding in Node JS)
+exporting: module.exports={prop1:val1}
+importing: var x = require('./....')
+
+b. ES6 (2015) module format:
+exporting: export member
+importing: import {member} from './...'
+
+c. AMD (asynchronous module definition)
+require([],function(){
+})
+
+d. UMD (Universal module definition)
+
+module loader:
+a. common js module loader
+b. requirejs module loader (understands ONLY AMD format)
+
 
