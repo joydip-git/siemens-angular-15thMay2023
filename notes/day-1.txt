@@ -17,3 +17,7 @@ JS engine:
 Node JS: server side framework bulit at the top of V8 engine
 2009 by Ryan Dahl
 
+CSS:
+	a. inline styling
+	b. outline styling
+

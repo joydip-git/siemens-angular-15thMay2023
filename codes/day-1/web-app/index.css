@@ -1,0 +1,29 @@
+/* element selector */
+/* h2 {
+            text-align: center;
+            background-color: aquamarine;
+            font-family: 'Courier New', Courier, monospace;
+        } */
+
+/* id selector */
+/* #mainHeader {
+            text-align: center;
+            background-color: aquamarine;
+            font-family: 'Courier New', Courier, monospace;
+        } */
+
+/* class selector */
+.common {
+  text-align: center;
+  background-color: aquamarine;
+  font-family: "Courier New", Courier, monospace;
+}
+
+div {
+  margin-left: 30px;
+  text-align: center;
+}
+
+.mainDiv {
+  font-weight: bold;
+}
