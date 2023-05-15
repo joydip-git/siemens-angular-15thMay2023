@@ -1,1 +1,19 @@
 https://github.com/joydip-git/siemens-angular-15thMay2023
+
+Roadmap:
+	a. JS basics and advanced
+	b. JS new features
+	c. web developmet using HTML, CSS, JS
+	d. modular application
+	e. Node JS
+	f. Angular with Typescript
+
+JS engine:
+	chrome: V8
+	edge: chromekit (v8)
+	safari: JS Core
+	firefox: Spidermonkey
+
+Node JS: server side framework bulit at the top of V8 engine
+2009 by Ryan Dahl
+
