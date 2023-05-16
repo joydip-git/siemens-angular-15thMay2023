@@ -9,3 +9,24 @@
 </div>
 -->
 <!-- <input type="text" id="txtMessage" [value]="message" (keyup)="changeMessage(msgtxt.value)" #msgtxt> -->
+<fieldset>
+    <legend>Calculator</legend>
+    <form>
+        <div>
+            <label for="txtFirst">Enter 1st Number: &nbsp;</label>
+            <input type="text" name="first" id="txtFirst" [(ngModel)]="first" #fnum>
+        </div>
+        <div>
+            <label for="txtSecond">Enter 2nd Number: &nbsp;</label>
+            <input type="text" id="txtSecond" name="second" [(ngModel)]="second" #snum>
+        </div>
+        <div>
+            <!-- <input type="button" value="Calculate" id="btnCalulate" (click)="calculate(+fnum.value,+snum.value)"> -->
+            <input type="button" value="Calculate" id="btnCalulate" (click)="calculate()">
+        </div>
+        <div>
+            <label for="txtResult">Result: &nbsp;</label>
+            <input type="text" id="txtResult" [value]="result" readonly>
+        </div>
+    </form>
+</fieldset>
