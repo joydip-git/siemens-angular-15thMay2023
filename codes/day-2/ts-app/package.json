@@ -1,0 +1,14 @@
+{
+  "name": "ts-app",
+  "version": "1.0.0",
+  "scripts": {
+    "compile:watch": "tsc -w",
+    "start": "nodemon ./dist/index.js"
+  },
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.4"
+  }
+}

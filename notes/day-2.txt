@@ -1,0 +1,5 @@
+JS execution cycle:
+	a. compilation or preparation stage:
+		delcaration of variable and function
+	b. execution stage:
+TypeScript:
