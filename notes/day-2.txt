@@ -2,4 +2,38 @@ JS execution cycle:
 	a. compilation or preparation stage:
 		delcaration of variable and function
 	b. execution stage:
-TypeScript:
+
+
+Decorators:
+Component => @Component()
+
+localhost/first-ng-app
+
+binding:
+a. data binding
+	direction: code => view
+	i. interpolation: 
+	<input value="{{message}}">
+	ii. property binding:
+	<input [value]="message">
+
+	
+b. event binding
+	direction: view => code <element (event-name)="method-in-cls(arguments)">
+
+c. two-way biding:
+	<element [(ngModel)]="prop-in-cls">
+
+
+@Directive({
+selector:'[ngModel]'
+})
+export class NgModelDirective{
+}
+
+
+@NgModule({
+	declarations:[NgModelDirective]
+})
+export class FormsModule{
+}
