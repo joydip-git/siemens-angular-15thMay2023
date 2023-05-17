@@ -1,0 +1,15 @@
+1. Angular:
+	a. Client-side framework for UI development	
+	b. it's a SPA
+	c. helps you to build UI through series of components - either by nesting components inside each other or by routing
+	d. separation of concern
+	e. dependency injection
+	f. binding - data and event binding for passing data between view and code of the same component as well as between different components
+	g. forms - handling form data
+	h. routing
+	i. interceptors
+
+Forms:
+a. template-driven form
+b. reactive form
+c. dynamic form
