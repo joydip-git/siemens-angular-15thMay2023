@@ -24,6 +24,6 @@ export class CalculatorComponent {
   //   this.result = this.first + this.second
   // }
   calculate(calcForm: NgForm) {
-    this.result = calcForm.controls['first'].value + calcForm.controls['second'].value
+    this.result = (+calcForm.controls['first'].value) + calcForm.controls['second'].value
   }
 }

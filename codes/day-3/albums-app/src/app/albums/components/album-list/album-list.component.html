@@ -3,29 +3,46 @@
 <ng-template #loading>
     <span>Loading..please wait</span>
 </ng-template>
+<ng-template #err>
+    <span>{{errorMessage}}</span>
+</ng-template>
 <ng-template #alternate>
     <span>Albums not found</span>
 </ng-template>
 
 <div *ngIf="loadingComplete;else loading">
-    <table class="table table-hover" *ngIf="albums;else alternate">
-        <thead class="theadColor">
-            <tr>
-                <th>Album Id</th>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Url</th>
-                <th>Thumbnail URL</th>
-            </tr>
-        </thead>
-        <tbody class="table-dark">
-            <tr *ngFor="let al of albums">
-                <td>{{al.albumId}}</td>
-                <td>{{al.id}}</td>
-                <td>{{al.title}}</td>
-                <td>{{al.url}}</td>
-                <td>{{al.thumbnailUrl}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div *ngIf="errorMessage==='';else err">
+        <div class="md-4">
+            <label for="txtFilter">Filter: &nbsp;</label>
+            <input type="text" id="txtFilter" [(ngModel)]="filterText">
+        </div>
+        <br>
+        <table class="table table-hover" *ngIf="albums;else alternate">
+            <thead class="theadColor">
+                <tr>
+                    <th>Album Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Url</th>
+                    <th>Thumbnail URL</th>
+                </tr>
+            </thead>
+            <tbody class="table-dark">
+                <tr *ngFor="let al of (albums|productfilter:filterText)">
+                    <td>
+                        {{al.albumId}}
+                    </td>
+                    <!-- <td>{{al.id|currency:'INR'}}</td> -->
+                    <td>
+                        <a [routerLink]="['/albums-list',al.id]">
+                            {{al.id}}
+                        </a>
+                    </td>
+                    <td>{{al.title|uppercase}}</td>
+                    <td>{{al.url}}</td>
+                    <td>{{al.thumbnailUrl}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

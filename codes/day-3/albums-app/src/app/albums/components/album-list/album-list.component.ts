@@ -5,12 +5,13 @@ import { ALBUM_SERVICE_TOKEN } from 'src/app/constants/appconstants';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-album-list',
+  //selector: 'app-album-list',
   templateUrl: './album-list.component.html',
   styleUrls: ['./album-list.component.css'],
   // providers: [AlbumService]
 })
 export class AlbumListComponent implements OnInit, OnDestroy {
+  filterText = ''
   albums?: Album[];
   loadingComplete = false
   errorMessage = ''
@@ -29,7 +30,7 @@ export class AlbumListComponent implements OnInit, OnDestroy {
     const obs: Observable<Album[]> = this.svcRef.getAlbums()
     this.albumSubscription = obs.subscribe({
       next: (arr: Album[]) => {
-        this.albums = arr
+        this.albums = arr.splice(0, 9)
         this.loadingComplete = true
         this.errorMessage = ''
       },
