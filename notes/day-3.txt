@@ -17,4 +17,15 @@ b. reactive form
 		directives: formGroup, formControl, formControlName
 c. dynamic form
 
+Validation:
+	validator functions
+	ValidationErrors:
+	{
+		prop-name: bool/object/string
+	}
+
+	interface ValidationErrors{
+		[prop:string]:any
+	}
+
 
