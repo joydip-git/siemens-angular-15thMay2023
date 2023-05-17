@@ -9,7 +9,12 @@
 	h. routing
 	i. interceptors
 
-Forms:
+Forms: @angular/forms
 a. template-driven form
+		Module: FormsModule => ngModel and ngForm
 b. reactive form
+		Module: FormsModule, ReactiveFormsModule
+		directives: formGroup, formControl, formControlName
 c. dynamic form
+
+

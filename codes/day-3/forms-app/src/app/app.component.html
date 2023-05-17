@@ -1,20 +1,38 @@
 <fieldset>
   <legend>Calculator</legend>
-  <form>
+  <form [formGroup]="calcForm">
     <div>
       <label for="txtFirst">Enter 1st Number: &nbsp;</label>
-      <input type="text" id="txtFirst">
+      <!-- <input type="text" id="txtFirst" [formControl]="first"> -->
+      <input type="text" id="txtFirst" formControlName="first">
+      <div *ngIf="first?.invalid && first?.touched">
+        <div *ngIf="first?.errors?.['required']">
+          Enter a value
+        </div>
+        <div *ngIf="first?.errors?.['min']">
+          Minimum value is {{first?.errors?.['min'].min}} and your actual value is {{first?.errors?.['min'].actual}}
+        </div>
+      </div>
     </div>
     <div>
       <label for="txtSecond">Enter 2nd Number: &nbsp;</label>
-      <input type="text" id="txtSecond">
+      <!-- <input type="text" id="txtSecond" [formControl]="second"> -->
+      <input type="text" id="txtSecond" formControlName="second">
+      <div *ngIf="second?.invalid && second?.touched">
+        <div *ngIf="second?.errors?.['required']">
+          Enter a value
+        </div>
+        <div *ngIf="second?.errors?.['min']">
+          Minimum value is 1
+        </div>
+      </div>
     </div>
     <div>
-      <input type="button" value="Calculate" id="btnCalulate">
-    </div>
-    <div>
-      <label for="txtResult">Result: &nbsp;</label>
-      <input type="text" id="txtResult" readonly>
+      <input type="button" value="Calculate" id="btnCalulate" (click)="calculate()">
     </div>
   </form>
+  <div>
+    <label for="txtResult">Result: &nbsp;</label>
+    <input type="text" id="txtResult" [value]="result" readonly>
+  </div>
 </fieldset>
