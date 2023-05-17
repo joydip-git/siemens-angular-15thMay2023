@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AlbumListComponent } from './components/album-list/album-list.component';
 import { AlbumService } from './services/album.service';
 import { ALBUM_SERVICE_TOKEN, ALBUM_SERVICE_TYPE } from '../constants/appconstants';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -11,7 +12,7 @@ import { ALBUM_SERVICE_TOKEN, ALBUM_SERVICE_TYPE } from '../constants/appconstan
     AlbumListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, HttpClientModule
   ],
   //providers: [AlbumService],
   providers: [

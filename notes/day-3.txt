@@ -28,4 +28,23 @@ Validation:
 		[prop:string]:any
 	}
 
+Component Lifecycle:
+a. constructor
+b. changes
+c. init
+
+event-name			interface			method-name
+------------------------------------------------
+X						  OnX						ngOnX
+
+
+HTTP requests:
+built-in service class: HttpClient
+package: @angular/common/http
+module: HttpClientModule
+
+
+
+
+
 
