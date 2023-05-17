@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -12,16 +13,17 @@ export class CalculatorComponent {
   //   this.message = msg
   // }
 
-  first = 0
-  second = 0
+  // first = 0
+  // second = 0
   result = 0
+  minValue = 1
 
   // calculate(f: number, s: number) {
   //   this.first = f
   //   this.second = s
   //   this.result = this.first + this.second
   // }
-  calculate() {
-    this.result = Number(this.first) + (+this.second)
+  calculate(calcForm: NgForm) {
+    this.result = calcForm.controls['first'].value + calcForm.controls['second'].value
   }
 }

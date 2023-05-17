@@ -11,18 +11,38 @@
 <!-- <input type="text" id="txtMessage" [value]="message" (keyup)="changeMessage(msgtxt.value)" #msgtxt> -->
 <fieldset>
     <legend>Calculator</legend>
-    <form>
+    <form ngForm #calcForm="ngForm">
         <div>
             <label for="txtFirst">Enter 1st Number: &nbsp;</label>
-            <input type="text" name="first" id="txtFirst" [(ngModel)]="first" #fnum>
+            <!-- <input type="text" name="first" id="txtFirst" [(ngModel)]="first" #fnum> -->
+            <input type="number" name="first" id="txtFirst" ngModel #fnum="ngModel" required [min]="minValue">
+            <div *ngIf="fnum.invalid && fnum.touched">
+                <div *ngIf="fnum.errors?.['required']">
+                    Enter a value
+                </div>
+                <div *ngIf="fnum.errors?.['min']">
+                    Minimum value is {{fnum.errors?.['min'].min}} and your actual value is
+                    {{fnum.errors?.['min'].actual}}
+                </div>
+            </div>
         </div>
         <div>
             <label for="txtSecond">Enter 2nd Number: &nbsp;</label>
-            <input type="text" id="txtSecond" name="second" [(ngModel)]="second" #snum>
+            <!-- <input type="text" id="txtSecond" name="second" [(ngModel)]="second" #snum> -->
+            <input type="number" id="txtSecond" name="second" ngModel #snum="ngModel" required [min]="minValue">
+            <div *ngIf="snum.invalid && snum.touched">
+                <div *ngIf="snum.errors?.['required']">
+                    Enter a value
+                </div>
+                <div *ngIf="snum.errors?.['min']">
+                    Minimum value is {{snum.errors?.['min'].min}} and your actual value is
+                    {{snum.errors?.['min'].actual}}
+                </div>
+            </div>
         </div>
         <div>
             <!-- <input type="button" value="Calculate" id="btnCalulate" (click)="calculate(+fnum.value,+snum.value)"> -->
-            <input type="button" value="Calculate" id="btnCalulate" (click)="calculate()">
+            <input type="button" value="Calculate" id="btnCalulate" (click)="calculate(calcForm)">
         </div>
         <div>
             <label for="txtResult">Result: &nbsp;</label>

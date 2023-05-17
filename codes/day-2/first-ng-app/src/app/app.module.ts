@@ -3,6 +3,7 @@ import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from "@angular/forms";
+import { ValidateNumberDirective } from "./directives/validate-number.directive";
 
 
 @NgModule({
@@ -10,7 +11,7 @@ import { FormsModule } from "@angular/forms";
     //a. components
     //b. pipes
     //c. directives
-    declarations: [AppComponent, CalculatorComponent],
+    declarations: [AppComponent, CalculatorComponent, ValidateNumberDirective],
     //to mention the name of services
     providers: [],
     //to mention the name of modules

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { numberValidator } from './validators/numbervalidator';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,8 @@ export class AppComponent {
   //   secondCtrl: this.second
   // })
   calcForm = new FormGroup({
-    first: new FormControl('', [Validators.required, Validators.min(1)]),
-    second: new FormControl('', [Validators.required, Validators.min(1)])
+    first: new FormControl('', [Validators.required, numberValidator, Validators.min(1)]),
+    second: new FormControl('', [Validators.required, numberValidator, Validators.min(1)])
   })
   result = 0
 
